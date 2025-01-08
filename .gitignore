@@ -1,0 +1,54 @@
+# Fichiers générés par Visual Studio/Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Répertoires de build
+bin/
+obj/
+out/
+
+# Dépendances locales
+*.local
+*.log
+
+# Cache NuGet
+*.nupkg
+packages/
+
+# Configuration d'environnement
+.env
+.env.*
+
+# Fichiers spécifiques à Rider/JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers spécifiques à Visual Studio Code
+.vscode/
+
+# Sorties de build WebAssembly
+wwwroot/
+dist/
+
+# Fichiers de configuration
+launchSettings.json
+
+# Logs, débogage et profilage
+*.log
+*.tlog
+*.dmp
+
+# Système de gestion de versions externe
+*.orig
+*.rej
+
+# Par défaut, ne pas inclure les secrets ou certificats
+secrets.json
+*.pfx
+*.cert
