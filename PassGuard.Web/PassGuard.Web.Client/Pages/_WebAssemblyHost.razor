@@ -1,0 +1,12 @@
+﻿@page "/webassembly/{*path}"
+@rendermode InteractiveWebAssembly
+
+<Router AppAssembly="typeof(Program).Assembly" AdditionalAssemblies="new[] { typeof(Client._Imports).Assembly }">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <h1>Page non trouvée (Blazor WebAssembly)</h1>
+    </NotFound>
+</Router>

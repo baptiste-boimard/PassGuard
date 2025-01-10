@@ -1,7 +1,17 @@
 using PassGuard.Web.Client.Pages;
 using PassGuard.Web.Components;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Ajout du service de MudBlazor
+builder.Services.AddMudServices();
+
+// Ajout de mon service HttpClient
+builder.Services.AddHttpClient("ApiClient", client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration.GetConnectionString("ApiUrl"));
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -23,11 +33,10 @@ else
 }
 
 app.UseHttpsRedirection();
-
-
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()

@@ -7,8 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MudBlazor" Version="8.0.0-preview.7" />
+        <ProjectReference Include="..\..\PassGuard.Core\PassGuard.Core.csproj" />
         <ProjectReference Include="..\PassGuard.Web.Client\PassGuard.Web.Client.csproj"/>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Images\PassGuard.png" />
     </ItemGroup>
 
 </Project>
